@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="author" content="Zack">
+    <!-- <link rel="stylesheet" type="text/css" href="CharacterCreatorCSS.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<title>Character Creator</title>
+  </head>
+
+
+
+  <body class = "bg-secondary bg-gradient">
+    <h1>Character Creator</h1>
+    <div id = "MainInfo" class = "container">
+    <div class = "row">
+      <div class="col-3">
+        <p > Player Name:</p>
+      </div>
+      <div class="column col-3"><input type = "text" id = "PlayerName" placeholder="Player Name"> </div>   
+      <div class="column col-3">
+        <p>Character Name:</p> 
+      </div>
+      <div class="col-3"><input type = "text" id = "CharacterName" placeholder="Character Name">  </div>
+    </div>
+    <div class = "row">
+      <div class = "col">
+        <p>Race:</p>
+      </div>
+      <div class="col"> 
+        <select name = "Race" id = "RaceList">
+        <option id = "NoRace"> -------- </option>
+        <option id = "SpaceMarine" value = "SpaceMarine">Space Marine</option>
+        <option id = "Human" value = "Human">Human</option>
+      </select>
+      </div>
+      <div class = "col">  
+        <p>Archtype:</p>
+      </div> 
+      <div class = "col">  
+        <select id = "ArchtypeList"> </select>
+      </div>
+      <div class = "col">
+        <p>WarBand Name:</p>
+      </div>
+      <div class = "col">
+        <input type = "text" id = "WarBandName" placeholder="WarBand name">
+      </div>
+    </div>
+    </div>
+
+    <div id = "Characteristics" class = "row justify-content-evenly border border-secondary bg-light sticky-top">
+      <container id = "WeaponSkill" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Weapon Skill</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "WeaponSkillBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "WeaponSkillMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="WSincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="WSincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="WSincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="WSincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+
+      <container id = "BallisticSkill" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Ballistic Skill</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "BallisticSkillBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "BallisticSkillMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="BSincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="BSincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="BSincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="BSincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Strength" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Strength</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "StrengthBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "StrengthMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Strincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Strincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Strincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Strincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Toughness" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Toughness</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "ToughnessBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "ToughnessMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Toughnessincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Toughnessincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Toughnessincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Toughnessincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Agility" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Agility</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "AgilityBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "AgilityMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Agincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Agincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Agincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Agincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Intelligence" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Intelligence</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "IntelligenceBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "IntelligenceMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Intincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Intincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Intincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Intincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Perception" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Perception</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "PerceptionBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "PerceptionMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Perincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Perincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Perincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Perincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "WillPower" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>WillPower</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "WillPowerBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "WillPowerMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Willincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Willincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Willincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Willincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Fellowship" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Fellowship</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "FellowshipBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "FellowshipMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Felincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Felincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Felincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Felincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      <container id = "Infamy" class = "SkillContainer col-1 border border-secondary">
+        <div class = "TopSkillDiv row jusify-content-center">
+          <p>Infamy</p>
+        </div>
+        <div class = "row">
+          <div class="col ">
+            <input class = "SkillContainerBox" style="width:100%" type ="number" id = "InfamyBox">
+          </div>
+          <div class="col">
+            <input class = "SkillContainerMod" style = "width:100%" type ="number" id = "InfamyMod">            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Infincrease1" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input  style = "width:100%" type = "checkbox" id="Infincrease2" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Infincrease3" class = "CharacteristicIncreasebutton">
+          </div>
+          <div class="col">
+            <input style = "width:100%" type = "checkbox" id="Infincrease4" class = "CharacteristicIncreasebutton">
+          </div>
+        </div>
+      </container>
+      
+    </div>
+    <div id = "SKills">
+      <container class = "TrainedSkillBox row justify-content-evenly">
+        <div class="col-4">
+          <table id = "SkillColumn1">
+            <tr id = "Labels1">
+              <td>Skill Name</td>
+              <td>Known(+0)</td>
+              <td>Trained(+10)</td>
+              <td>Experienced(+20)</td>
+              <td>Veteran(+30)</td>
+            </tr>
+            <tr>
+              <td>Acrobatics(Ag)</td>
+              <td><input type = checkbox id ="AcrobaticsCB1" class ="Acrobaticsbutton"></td>
+              <td><input type = checkbox id = "AcrobaticsCB2" class ="Acrobaticsbutton"></td>
+              <td><input type = checkbox id = "AcrobaticsCB3" class ="Acrobaticsbutton"></td>
+              <td><input type = checkbox id = "AcrobaticsCB4" class ="Acrobaticsbutton"></td>
+            </tr>
+            <tr>
+              <td id = "Athletics">Athletics(Str)</td>
+              <td><input type = checkbox id = "AthleticsCB1" class = "Athleticsbutton"></td>
+              <td><input type = checkbox id = "AthleticsCB2" class = "Athleticsbutton"></td>
+              <td><input type = checkbox id = "AthleticsCB3" class = "Athleticsbutton"></td>
+              <td><input type = checkbox id = "AthleticsCB4" class = "Athleticsbutton"></td>
+            </tr>
+            <tr>
+              <td>Awareness(Per)</td>
+              <td><input type = checkbox id = "AwarenessCB1" class = "Awarenessbutton"></td>
+              <td><input type = checkbox id = "AwarenessCB2" class = "Awarenessbutton"></td>
+              <td><input type = checkbox id = "AwarenessCB3" class = "Awarenessbutton"></td>
+              <td><input type = checkbox id = "AwarenessCB4" class = "Awarenessbutton"></td>
+            </tr>
+            <tr>
+              <td>Charm(Fel)</td>
+              <td><input type = checkbox id = "CharmCB1" class = "Charmbutton"></td>
+              <td><input type = checkbox id = "CharmCB2" class = "Charmbutton"></td>
+              <td><input type = checkbox id = "CharmCB3" class = "Charmbutton"></td>
+              <td><input type = checkbox id = "CharmCB4" class = "Charmbutton"></td>
+            </tr>
+            <tr>
+              <td>Command(Fel)</td>
+              <td><input type = checkbox id = "CommandCB1" class = "Commandbutton"></td>
+              <td><input type = checkbox id = "CommandCB2" class = "Commandbutton"></td>
+              <td><input type = checkbox id = "CommandCB3" class = "Commandbutton"></td>
+              <td><input type = checkbox id = "CommandCB4" class = "Commandbutton"></td>
+            </tr>
+            <tr>
+              <td>Commerce(Int)</td>
+              <td><input type = checkbox id = "CommerceCB1" class = "Commercebutton"></td>
+              <td><input type = checkbox id = "CommerceCB2" class = "Commercebutton"></td>
+              <td><input type = checkbox id = "CommerceCB3" class = "Commercebutton"></td>
+              <td><input type = checkbox id = "CommerceCB4" class = "Commercebutton"></td>
+            </tr>
+            <tr><td>Common Lore(Int)</td></tr>
+            <tr>
+              <td><input type = text id = "CommonLore1"></td>
+              <td><input type = checkbox id = "CommonLore1CB1" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore1CB2" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore1CB3" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore1CB4" class = "CommonLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "CommonLore2"></td>
+              <td><input type = checkbox id = "CommonLore2CB1" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore2CB2" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore2CB3" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore2CB4" class = "CommonLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "CommonLore3"></td>
+              <td><input type = checkbox id = "CommonLore3CB1" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore3CB2" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore3CB3" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore3CB4" class = "CommonLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "CommonLore4"></td>
+              <td><input type = checkbox id = "CommonLore4CB1" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore4CB2" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore4CB3" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore4CB4" class = "CommonLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "CommonLore5"></td>
+              <td><input type = checkbox id = "CommonLore5CB1" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore5CB2" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore5CB3" class = "CommonLorebutton"></td>
+              <td><input type = checkbox id = "CommonLore5CB4" class = "CommonLorebutton"></td>
+            </tr>
+            <tr>
+                <td>Deceive(Fel)</td>
+                <td><input type = checkbox id = "DeceiveCB1" class = "Deceivebutton"></td>
+                <td><input type = checkbox id = "DeceiveCB2" class = "Deceivebutton"></td>
+                <td><input type = checkbox id = "DeceiveCB3" class = "Deceivebutton"></td>
+                <td><input type = checkbox id = "DeceiveCB4" class = "Deceivebutton"></td>
+            </tr>
+            <tr>
+              <td>Dodge(Ag)</td>
+              <td><input type = checkbox id = "DodgeCB1" class = "Dodgebutton"></td>
+              <td><input type = checkbox id = "DodgeCB2" class = "Dodgebutton"></td>
+              <td><input type = checkbox id = "DodgeCB3" class = "Dodgebutton"></td>
+              <td><input type = checkbox id = "DodgeCB4" class = "Dodgebutton"></td>
+          </tr>
+          <tr><td>Forbidden Lore(Int)</td></tr>
+            <tr>
+              <td><input type = text id = "ForbiddenLore1"></td>
+              <td><input type = checkbox id = "ForbiddenLore1CB1" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore1CB2" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore1CB3" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore1CB4" class = "ForbiddenLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "ForbiddenLore2"></td>
+              <td><input type = checkbox id = "ForbiddenLore2CB1" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore2CB2" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore2CB3" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore2CB4" class = "ForbiddenLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "ForbiddenLore3"></td>
+              <td><input type = checkbox id = "ForbiddenLore3CB1" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore3CB2" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore3CB3" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore3CB4" class = "ForbiddenLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "ForbiddenLore4"></td>
+              <td><input type = checkbox id = "ForbiddenLore4CB1" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore4CB2" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore4CB3" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore4CB4" class = "ForbiddenLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "ForbiddenLore5"></td>
+              <td><input type = checkbox id = "ForbiddenLore5CB1" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore5CB2" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore5CB3" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore5CB4" class = "ForbiddenLorebutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "ForbiddenLore6"></td>
+              <td><input type = checkbox id = "ForbiddenLore6CB1" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore6CB2" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore6CB3" class = "ForbiddenLorebutton"></td>
+              <td><input type = checkbox id = "ForbiddenLore6CB4" class = "ForbiddenLorebutton"></td>
+            </tr>
+            <tr>
+              <td>Inquiry(Fel)</td>
+              <td><input type = checkbox id = "InquiryCB1" class = "Inquirybutton"></td>
+              <td><input type = checkbox id = "InquiryCB2" class = "Inquirybutton"></td>
+              <td><input type = checkbox id = "InquiryCB3" class = "Inquirybutton"></td>
+              <td><input type = checkbox id = "InquiryCB4" class = "Inquirybutton"></td>
+            </tr>
+            <tr>
+              <td>Interrogation(Wp)</td>
+              <td><input type = checkbox id = "InterrogationCB1" class = "Interrogationbutton"></td>
+              <td><input type = checkbox id = "InterrogationCB2" class = "Interrogationbutton"></td>
+              <td><input type = checkbox id = "InterrogationCB3" class = "Interrogationbutton"></td>
+              <td><input type = checkbox id = "InterrogationCB4" class = "Interrogationbutton"></td>
+            </tr>
+            <tr>
+              <td>Intimidate</td>
+              <td><input type = checkbox id = "IntimidateCB1" class = "Intimidatebutton"></td>
+              <td><input type = checkbox id = "IntimidateCB2" class = "Intimidatebutton"></td>
+              <td><input type = checkbox id = "IntimidateCB3" class = "Intimidatebutton"></td>
+              <td><input type = checkbox id = "IntimidateCB4" class = "Intimidatebutton"></td>
+            </tr>
+            <tr><td>Linguistics(Int)</td></tr>
+            <tr>
+              <td><input type = text id = "Linguistics1"></td>
+              <td><input type = checkbox id = "Linguistics1CB1" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics1CB2" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics1CB3" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics1CB4" class = "Linguisticsbutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "Linguistics2"></td>
+              <td><input type = checkbox id = "Linguistics2CB1" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics2CB2" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics2CB3" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics2CB4" class = "Linguisticsbutton"></td>
+            </tr>
+            <tr>
+              <td><input type = text id = "Linguistics3"></td>
+              <td><input type = checkbox id = "Linguistics3CB1" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics3CB2" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics3CB3" class = "Linguisticsbutton"></td>
+              <td><input type = checkbox id = "Linguistics3CB4" class = "Linguisticsbutton"></td>
+            </tr>
+            <tr>
+              <td>Logic(Int)</td>
+              <td><input type = checkbox id = "LogicCB1" class = "Logicbutton"></td>
+              <td><input type = checkbox id = "LogicCB2" class = "Logicbutton"></td>
+              <td><input type = checkbox id = "LogicCB3" class = "Logicbutton"></td>
+              <td><input type = checkbox id = "LogicCB4" class = "Logicbutton"></td>
+            </tr>
+            </table>
+        </div>
+          <div class="col-4">
+            <table id = "SkillColumn2">
+              <tr id = "Labels2">
+                <td>Skill Name</td>
+                <td>Known(+0)</td>
+                <td>Trained(+10)</td>
+                <td>Experienced(+20)</td>
+                <td>Veteran(+30)</td>
+              </tr>
+            <tr>
+              <td>Medicae(Int)</td>
+              <td><input type = checkbox id = "MedicaeCB1" class = "Medicaebutton"></td>
+              <td><input type = checkbox id = "MedicaeCB2" class = "Medicaebutton"></td>
+              <td><input type = checkbox id = "MedicaeCB3" class = "Medicaebutton"></td>
+              <td><input type = checkbox id = "MedicaeCB4" class = "Medicaebutton"></td>
+            </tr>
+            <tr>
+              <td>Navigate(Surface)(Int)</td>
+              <td><input type = checkbox id = "SurfNavCB1" class = "SurfNavbutton"></td>
+              <td><input type = checkbox id = "SurfNavCB2" class = "SurfNavbutton"></td>
+              <td><input type = checkbox id = "SurfNavCB3" class = "SurfNavbutton"></td>
+              <td><input type = checkbox id = "SurfNavCB4" class = "SurfNavbutton"></td>
+            </tr>
+            <tr>
+              <td>Navigate(Stellar)(Int)</td>
+              <td><input type = checkbox id = "StelNavCB1" class = "StelNavbutton"></td>
+              <td><input type = checkbox id = "StelNavCB2" class = "StelNavbutton"></td>
+              <td><input type = checkbox id = "StelNavCB3" class = "StelNavbutton"></td>
+              <td><input type = checkbox id = "StelNavCB4" class = "StelNavbutton"></td>
+            </tr>
+            <tr>
+              <td>Navigate(Warp)(Int)</td>
+              <td><input type = checkbox id = "WarpNavCB1" class = "WarpNavbutton"></td>
+              <td><input type = checkbox id = "WarpNavCB2" class = "WarpNavbutton"></td>
+              <td><input type = checkbox id = "WarpNavCB3" class = "WarpNavbutton"></td>
+              <td><input type = checkbox id = "WarpNavCB4" class = "WarpNavbutton"></td>
+            </tr>
+            <tr>
+              <td>Operate(Surface)(Ag)</td>
+              <td><input type = checkbox id = "SurfOpCB1" class = "SurfOpbutton"></td>
+              <td><input type = checkbox id = "SurfOpCB2" class = "SurfOpbutton"></td>
+              <td><input type = checkbox id = "SurfOpCB3" class = "SurfOpbutton"></td>
+              <td><input type = checkbox id = "SurfOpCB4" class = "SurfOpbutton"></td>
+            </tr>
+            <tr>
+              <td>Operate(Aeronautical)(Ag)</td>
+              <td><input type = checkbox id = "AirOpCB1" class = "AirOpbutton"></td>
+              <td><input type = checkbox id = "AirOpCB2" class = "AirOpbutton"></td>
+              <td><input type = checkbox id = "AirOpCB3" class = "AirOpbutton"></td>
+              <td><input type = checkbox id = "AirOpCB4" class = "AirOpbutton"></td>
+            </tr>
+            <tr>
+              <td>Operate(Voidship)(Ag)</td>
+              <td><input type = checkbox id = "VoidOpCB1" class = "VoidOpbutton"></td>
+              <td><input type = checkbox id = "VoidOpCB2" class = "VoidOpbutton"></td>
+              <td><input type = checkbox id = "VoidOpCB3" class = "VoidOpbutton"></td>
+              <td><input type = checkbox id = "VoidOpCB4" class = "VoidOpbutton"></td>
+            </tr>
+            <tr>
+              <td>Parry(Ws)</td>
+              <td><input type = checkbox id = "ParryCB1" class = "Parrybutton"></td>
+              <td><input type = checkbox id = "ParryCB2" class = "Parrybutton"></td>
+              <td><input type = checkbox id = "ParryCB3" class = "Parrybutton"></td>
+              <td><input type = checkbox id = "ParryCB4" class = "Parrybutton"></td>
+            </tr>
+            <tr>
+              <td>Psyniscience(Ws)</td>
+              <td><input type = checkbox id = "PsyniscienceCB1" class = "Psynisciencebutton"></td>
+              <td><input type = checkbox id = "PsyniscienceCB2" class = "Psynisciencebutton"></td>
+              <td><input type = checkbox id = "PsyniscienceCB3" class = "Psynisciencebutton"></td>
+              <td><input type = checkbox id = "PsyniscienceCB4" class = "Psynisciencebutton"></td>
+            </tr>
+            
+                    </table>
+          </div>
+      
+
+      </container>
+    </div>
+
+    <script src = "CharacteristicJS.js"></script>
+    <script>
+      
+
+      //----------------------------Skill JavaScript
+      var acrobaticsIncrease = document.querySelectorAll(".Acrobaticsbutton").forEach(acrobaticsIncrease => {acrobaticsIncrease.addEventListener('change', addAdvancement)});
+
+      var athleticsIncrease = document.querySelectorAll(".Athleticsbutton").forEach(acrobaticsIncrease=>{acrobaticsIncrease.addEventListener('change', addAdvancement)});
+
+      var awarenessIncrease = document.querySelectorAll(".Awarenessbutton").forEach(awarenessIncrease=>{awarenessIncrease.addEventListener('change', addAdvancement)});
+
+      var charmIncrease = document.querySelectorAll(".Charmbutton").forEach(charmIncrease=>{charmIncrease.addEventListener('change', addAdvancement)});
+
+      var commandIncrease = document.querySelectorAll(".Commandbutton").forEach(commandIncrease=>{commandIncrease.addEventListener('change', addAdvancement)});
+
+      var commerceIncrease = document.querySelectorAll(".Commercebutton").forEach(commerceIncrease=>{commerceIncrease.addEventListener('change', addAdvancement)});
+
+      var commonLoreIncrease = document.querySelectorAll(".CommonLorebutton").forEach(commonLoreIncrease=>{commonLoreIncrease.addEventListener('change', addInputAdvancement)});
+
+      var deceiveIncrease = document.querySelectorAll(".Deceivebutton").forEach(deceiveIncrease=>{deceiveIncrease.addEventListener('change', addAdvancement)});
+
+      var dodgeIncrease = document.querySelectorAll(".Dodgebutton").forEach(dodgeIncrease=>{dodgeIncrease.addEventListener('change', addAdvancement)});
+      
+      var forbiddenLoreIncrease = document.querySelectorAll(".ForbiddenLorebutton").forEach(forbiddenLoreIncrease=>{forbiddenLoreIncrease.addEventListener('change', addInputAdvancement)});
+     
+      var inquiryIncrease = document.querySelectorAll(".Inquirybutton").forEach(inquiryIncrease=>{inquiryIncrease.addEventListener('change', addAdvancement)});
+
+      var interrogationIncrease = document.querySelectorAll(".Interrogationbutton").forEach(interrogationIncrease=>{interrogationIncrease.addEventListener('change', addAdvancement)});
+
+      var intimidateIncrease = document.querySelectorAll(".Intimidatebutton").forEach(intimidateIncrease=>{intimidateIncrease.addEventListener('change', addAdvancement)});
+
+      var linguisticsIncrease = document.querySelectorAll(".Linguisticsbutton").forEach(linguisticsIncrease=>{linguisticsIncrease.addEventListener('change', addInputAdvancement)});
+
+      var logicIncrease = document.querySelectorAll(".Logicbutton").forEach(logicIncrease=>{logicIncrease.addEventListener('change', addAdvancement)});
+     
+      var medicaeIncrease = document.querySelectorAll(".Medicaebutton").forEach(medicaeIncrease=>{medicaeIncrease.addEventListener('change', addAdvancement)});
+
+      var surfaceNavIncrease = document.querySelectorAll(".SurfNavbutton").forEach(surfaceNavIncrease=>{surfaceNavIncrease.addEventListener('change', addAdvancement)});
+
+      var stellarNavIncrease = document.querySelectorAll(".StelNavbutton").forEach(stellarNavIncrease=>{stellarNavIncrease.addEventListener('change', addAdvancement)});
+
+      var warpNavIncrease = document.querySelectorAll(".WarpNavbutton").forEach(warpNavIncrease=>{warpNavIncrease.addEventListener('change', addAdvancement)});
+      
+      var surfaceOpIncrease = document.querySelectorAll(".SurfOpbutton").forEach(surfaceOpIncrease=>{surfaceOpIncrease.addEventListener('change', addAdvancement)});
+
+      var aeronauticalOpIncrease = document.querySelectorAll(".AirOpbutton").forEach(aeronauticalOpIncrease=>{aeronauticalOpIncrease.addEventListener('change', addAdvancement)});
+
+      var voidshipOpIncrease = document.querySelectorAll(".VoidOpbutton").forEach(voidshipOpIncrease=>{voidshipOpIncrease.addEventListener('change', addAdvancement)});
+      
+      var parryIncrease = document.querySelectorAll(".Parrybutton").forEach(parryIncrease=>{parryIncrease.addEventListener('change', addAdvancement)});
+
+      var psyniscienceIncrease = document.querySelectorAll(".Psynisciencebutton").forEach(psyniscienceIncrease=>{psyniscienceIncrease.addEventListener('change', addAdvancement)});
+
+
+      function addAdvancement(event){
+        button = document.getElementById(event.target.id);
+        advancementText = button.parentElement.parentElement.firstElementChild.firstChild.data;
+        //change beneath this line for advancement info
+        console.log(advancementText);
+        //inputBox.value = advancementText;
+      }
+
+      function addInputAdvancement(event){
+        button = document.getElementById(event.target.id);
+        advancementText = button.parentElement.parentElement.firstElementChild.firstChild.value;
+        console.log(advancementText);
+      }
+      //-----------------------------------RaceChoice Functions
+      var raceChoice = document.getElementById("RaceList");
+      raceChoice.addEventListener('change', raceSkillUpdate);
+
+      function raceSkillUpdate(){
+        var allChecks = document.querySelectorAll("input[type = 'checkbox']");
+        for(var i = 0; i < allChecks.length; i++) {
+            allChecks[i].checked = false;   
+        }
+                 //-----------------non- input Skill variables
+        var athletics = document.getElementById("AthleticsCB1");      
+
+        var awareness = document.getElementById("AwarenessCB1");
+
+        var dodge = document.getElementById("DodgeCB1");
+        
+        var surfNav = document.getElementById("SurfNavCB1");
+        
+        var surfOp = document.getElementById("SurfOpCB1");
+        
+        var parry = document.getElementById("ParryCB1");
+
+
+                 //----------------------input Skill variables
+        var commonLore1 = document.getElementById("CommonLore1");
+        var commonLore1CB = document.getElementById("CommonLore1CB1");
+        commonLore1.value = "";
+
+        var commonLore2 = document.getElementById("CommonLore2");
+        var commonLore2CB = document.getElementById("CommonLore2CB1");
+        commonLore2.value = ""
+        
+        var forbiddenLore1 = document.getElementById("ForbiddenLore1");
+        var forbiddenLore1CB = document.getElementById("ForbiddenLore1CB1");
+        forbiddenLore1.value = "";
+
+        var forbiddenLore2 = document.getElementById("ForbiddenLore2");
+        var forbiddenLore2CB = document.getElementById("ForbiddenLore2CB1");
+        forbiddenLore2.value = "";
+         
+        var forbiddenLore3 = document.getElementById("ForbiddenLore3");
+        var forbiddenLore3CB = document.getElementById("ForbiddenLore3CB1");
+        forbiddenLore3.value = "";
+
+        var linguistics1 = document.getElementById("Linguistics1");
+        var linguistics1CB = document.getElementById("Linguistics1CB1");
+        linguistics1.value = "";
+
+        //FIXME=========================================NEED TRADE SKILL FOR HUMANS
+
+        switch(raceChoice.value){
+          case "Human":
+            commonLore1.value = "Pick One";
+            commonLore1CB.checked = true
+
+            commonLore2.vaue = "Pick One";
+            commonLore2CB.checked = true;
+
+            linguistics1.value = "Low Gothic";
+            linguistics1CB.checked = true;
+            console.log("Human");
+            break;
+          case "SpaceMarine":
+            //------non-input Skills
+            athletics.checked = true;
+
+            awareness.checked = true;
+
+            dodge.checked = true;
+
+            surfNav.checked = true;
+
+            surfOp.checked = true;
+
+            parry.checked = true;
+            //------input Skills
+            commonLore1.value = "War";
+            commonLore1CB.checked = true;
+
+            forbiddenLore1.value = "Adeptus Astartes";
+            forbiddenLore1CB.checked = true;
+      
+            forbiddenLore2.value = "The Horus Heresy";
+            forbiddenLore2CB.checked = true;
+
+
+            forbiddenLore3.value = "The Long War";
+            forbiddenLore3CB.checked = true;
+
+
+            linguistics1.value = "Low Gothic";
+            linguistics1CB.checked = true;
+            
+        }
+        archtypeListOptions();
+      }
+
+
+      function archtypeListOptions(){
+        var spaceMarineArchtypes = ["Champion", "Chosen", "Forsaken", "Sorceror", "Alpha Legion Marine", "Dark Apostle", "Night Lord", "Veteran of the Long War", "Warpsmith", "Khorne Berserker", "Plague Marine", "Noise Marine", "Thousand Sons Sorceror"];
+
+        var humanArchtypes = ["Apostate", "Heretek", "Renegade", "Psyker", "Chem-Hunter of Messia", "Idolitrex Magos of Forge Polix", "Xurunt Frost Father", "Writhing World Sorceror-King", "Death Priest of Mire", "PlagueMeister", "Pirate Prince of the Ragged Helix", "Flesh-Shaper of Melancholia", "Q'Sal Magister Immaterial"];
+      
+
+      var archtypeDropdown = document.getElementById("ArchtypeList");
+
+      archtypeDropdown.innerHTML= "";
+      if (raceChoice.value == "Human"){
+        for(var i = 0; i < humanArchtypes.length; ++i){
+          var newArchtypeOption = document.createElement('option');
+          newArchtypeOption.innerText = humanArchtypes[i];
+          archtypeDropdown.appendChild(newArchtypeOption);
+        }
+      }
+      else if(raceChoice.value == "SpaceMarine"){
+        for(var i = 0; i < spaceMarineArchtypes.length; ++i){
+          var newArchtypeOption = document.createElement('option');
+          newArchtypeOption.innerText = spaceMarineArchtypes[i];
+          archtypeDropdown.appendChild(newArchtypeOption);
+        }
+      }
+    }
+    </script>
+  </body>
+</html>

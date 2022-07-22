@@ -1,0 +1,42 @@
+var athletics = document.getElementById("AthleticsCB1");
+            athletics.checked = true;
+
+            var awareness = document.getElementById("AwarenessCB1");
+            awareness.checked = true;
+
+            var dodge = document.getElementById("DodgeCB1");
+            dodge.checked = true;
+
+            var surfNav = document.getElementById("SurfNavCB1");
+            surfNav.checked = true;
+
+            var surfOp = document.getElementById("SurfOpCB1");
+            surfOp.checked = true;
+
+            var parry = document.getElementById("ParryCB1");
+            parry.checked = true;
+            //------input Skills
+            var commonLore = document.getElementById("CommonLore1");
+            var commonLoreCB = document.getElementById("CommonLore1CB1");
+            commonLore.value = "War";
+            commonLoreCB.checked = true;
+
+            var forbiddenLore1 = document.getElementById("ForbiddenLore1");
+            var forbiddenLore1CB = document.getElementById("ForbiddenLore1CB1");
+            forbiddenLore1.value = "Adeptus Astartes";
+            forbiddenLore1CB.checked = true;
+        
+            var forbiddenLore2 = document.getElementById("ForbiddenLore2");
+            var forbiddenLore2CB = document.getElementById("ForbiddenLore2CB1");
+            forbiddenLore2.value = "The Horus Heresy";
+            forbiddenLore2CB.checked = true;
+
+            var forbiddenLore3 = document.getElementById("ForbiddenLore3");
+            var forbiddenLore3CB = document.getElementById("ForbiddenLore3CB1");
+            forbiddenLore3.value = "The Long War";
+            forbiddenLore3CB.checked = true;
+
+            var linguistics1 = document.getElementById("Linguistics1");
+            var linguistics1CB = document.getElementById("Linguistics1CB1");
+            linguistics1.value = "Low Gothic";
+            linguistics1CB.checked = true;
